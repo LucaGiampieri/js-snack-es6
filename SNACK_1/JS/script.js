@@ -51,11 +51,11 @@ let racingBikeikeLighter = racingBike[0];
 //creiamo un ciclo che vada a scorrere le bici e selezionare il peso
 for (let i = 0; i < racingBike.length; i++) {
     //se il peso di dell'oggetto che stiamo valutando in questo momento è minore
-    //inizialmente di quello che abbiamo settato di base (il primo)
+    //(inizialmente) di quello che abbiamo settato di base (il primo)
     //e successivamente a quello che abbiamo decretato come più leggero fino a quel momento
     if (racingBike[i].peso < racingBikeikeLighter.peso) {
         //il valore di racingBikeLighter diventa quello che stiamo valutando al momento
-        //altrimenti rimane quello precedente (o quello di aprtenza nel caso sia ancora lui)
+        //altrimenti rimane quello precedente (o quello di partenza nel caso sia ancora lui)
         racingBikeikeLighter = racingBike[i];
     }
 }
