@@ -28,3 +28,21 @@ const serieA = [
   { 'nome': 'Udinese', 'punti': 0, 'falliSubiti': 0 },
   { 'nome': 'Venezia', 'punti': 0, 'falliSubiti': 0 }
 ];
+
+
+//creiamo una funzione che genera numeri randominci in range
+function getRandomNumInRange (min, max){
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+
+//andiamo a innestare i punti e falli nel nostro array
+
+for (let i = 0; i <serieA.length; i++){
+    //inseriamo i punti in un range tra 50 e 100
+   serieA[i].punti = getRandomNumInRange(50,100);
+   //inseriamo i falli subiti tra un range di 200 e 300
+   serieA[i].falliSubiti = getRandomNumInRange(200,300);
+}
+//andiamo a stampare per verificare la corettezza
+console.table(serieA)
