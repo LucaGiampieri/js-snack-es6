@@ -35,14 +35,19 @@ function getRandomNumInRange (min, max){
     return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
+//creiamo un array vuoto in cuoi andremo ad inserire i falli subiti e il nome della squadra
+let serieAFouls = [];
 
 //andiamo a innestare i punti e falli nel nostro array
-
 for (let i = 0; i <serieA.length; i++){
     //inseriamo i punti in un range tra 50 e 100
    serieA[i].punti = getRandomNumInRange(50,100);
    //inseriamo i falli subiti tra un range di 200 e 300
    serieA[i].falliSubiti = getRandomNumInRange(200,300);
+   //puschiamo all'interno del nuovo array il nome della squadra e i falli subiti
+   serieAFouls.push({nome:serieA[i].nome, falliSubiti:serieA[i].falliSubiti});
 }
 //andiamo a stampare per verificare la corettezza
-console.table(serieA)
+console.log(serieA);
+console.table(serieAFouls);
+
