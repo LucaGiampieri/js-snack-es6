@@ -8,7 +8,7 @@ Stampare a schermo la bici con peso minore. */
 const racingBike = [
     {
         "nome": 'bici velocissima',
-        "peso": 30
+        "peso": 20
     },
     {
         "nome": 'bici velocissima modello volante',
@@ -20,7 +20,7 @@ const racingBike = [
     },
     {
         "nome": 'bici velocissima modello pesantissimo',
-        "peso": 50
+        "peso": 30
     },
     {
         "nome": 'bici velocissima ultraleggera',
@@ -32,19 +32,33 @@ const racingBike = [
     },
     {
         "nome": 'bici velocissima dilettanti',
-        "peso": 37
+        "peso": 29
     },
     {
         "nome": 'bici velocissimissimissima',
-        "peso": 20
+        "peso": 10
     }
 ];
 
 //andiamo a stamparlo per verificare che sia corretto
 console.log(racingBike);
 
-//creiamo un ciclo che vada ascorrere le bici e selezionare il peso
+//creiamo un object con nome e peso che ci fungerà da partenza per il confronto con gli altri
+let racingBikeikeLighter = racingBike[0];
 
-//facciamo in modo di valutare quale sia la bici più leggera
+//console.log(bikeLighter)
 
-//stampiamo in console la bici più leggera
+//creiamo un ciclo che vada a scorrere le bici e selezionare il peso
+for (let i = 0; i < racingBike.length; i++) {
+    //se il peso di dell'oggetto che stiamo valutando in questo momento è minore
+    //inizialmente di quello che abbiamo settato di base (il primo)
+    //e successivamente a quello che abbiamo decretato come più leggero fino a quel momento
+    if (racingBike[i].peso < racingBikeikeLighter.peso) {
+        //il valore di racingBikeLighter diventa quello che stiamo valutando al momento
+        //altrimenti rimane quello precedente (o quello di aprtenza nel caso sia ancora lui)
+        racingBikeikeLighter = racingBike[i];
+    }
+}
+
+//andiamo a stmapare il risultato
+console.log(racingBikeikeLighter);
